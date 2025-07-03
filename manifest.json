@@ -1,35 +1,24 @@
 {
-    "name": "cristofer_zerpa_web_portfolio",
-    "short_name": "cristofer_zerpa_web_portfolio",
+    "name": "Cristofer Zerpa Portfolio",
+    "short_name": "Cristofer Zerpa Portfolio",
     "start_url": ".",
-    "display": "standalone",
+    "display": "minimal-ui",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Cristofer Zerpa's web portfolio.",
+    "description": "Portfolio website for Cristofer Zerpa Portfolio.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
-    "icons": [
+   "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "icons/logo-aerium-2.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "icons/logo-aerium-2.png",
             "sizes": "512x512",
             "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-maskable-192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/Icon-maskable-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
         }
     ]
 }
+
