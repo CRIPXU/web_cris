@@ -17,7 +17,7 @@
 
   <title>Cristofer Zerpa Portfolio</title>
   <link rel="manifest" href="manifest.json">
-<script type="application/javascript">
+  <script type="application/javascript">
       function openLink(url, target, isAsync=false) {
         var is_safari = /^(?!.*chrome).*safari/i.test(navigator.userAgent.toLowerCase());
         if (is_safari && isAsync) {
@@ -28,17 +28,7 @@
       }
     </script>
 </head>
-<body id="app-container">
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=777859570');
-      });
-    }
-  </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
