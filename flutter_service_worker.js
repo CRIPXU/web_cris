@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "641b3c68fe0c91cae39328b0ef14f513",
-"assets/AssetManifest.bin.json": "f3d7f1a1f3a4fbe512ffae9fba969198",
-"assets/AssetManifest.json": "ad39b28cba4d54484af589c67ca112de",
+const RESOURCES = {"assets/AssetManifest.bin": "a8af46e55d7709666445eb9267fe1222",
+"assets/AssetManifest.bin.json": "a903f011f97208a688dd42ce0757296b",
+"assets/AssetManifest.json": "bca52ad18e98e5b2a6f380bb684a33b1",
 "assets/assets/fonts/visuelt/VisueltPro-Black.ttf": "691b6f9aa3ee625e3cd8da2f8849a126",
 "assets/assets/fonts/visuelt/VisueltPro-Bold.ttf": "18acd33c965a455418d4204f0f334ea8",
 "assets/assets/fonts/visuelt/VisueltPro-ExtraLight.ttf": "90bfa0766e43260710e3c6ac0f78c9e9",
@@ -76,8 +76,6 @@ const RESOURCES = {"assets/AssetManifest.bin": "641b3c68fe0c91cae39328b0ef14f513
 "assets/assets/images/projects/login_catalog/login8.png": "2bf8b3ab8d940dfb5c48069195c2d039",
 "assets/assets/images/projects/login_catalog/login9.png": "4eb5737139e26eb31c1bea5e6e2c0a6b",
 "assets/assets/images/projects/login_catalog/login_catalog_cover.jpg": "8142a609044c0f5b26df2964fe9304c4",
-"assets/assets/images/projects/MOVELZ/movelz.jpg": "77faa497b2fe6a53d5c2098f94f39614",
-"assets/assets/images/projects/MOVELZ/movelz_cover.jpg": "3c3a2b10b1a2cec85608853b55351460",
 "assets/assets/images/projects/otp_package/otp_cover.png": "6fc7ff3a9d1b6d8cbb81348c8f2df184",
 "assets/assets/images/projects/outfitr/outfitr_1.jpeg": "5a72c14039670e01bcbfaccbff889551",
 "assets/assets/images/projects/outfitr/outfitr_2.jpeg": "b5c6638904552202a14d3d65f6d69116",
@@ -134,7 +132,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "641b3c68fe0c91cae39328b0ef14f513
 "canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "f31737fb005cd3a3c6bd9355efd33061",
-"flutter_bootstrap.js": "a3f15624fbb8727215b0d4554127bca2",
+"flutter_bootstrap.js": "35b84ee2a100a84421ede0ef6d142b5f",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
