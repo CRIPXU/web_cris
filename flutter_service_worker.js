@@ -76,6 +76,8 @@ const RESOURCES = {"assets/AssetManifest.bin": "a8af46e55d7709666445eb9267fe1222
 "assets/assets/images/projects/login_catalog/login8.png": "2bf8b3ab8d940dfb5c48069195c2d039",
 "assets/assets/images/projects/login_catalog/login9.png": "4eb5737139e26eb31c1bea5e6e2c0a6b",
 "assets/assets/images/projects/login_catalog/login_catalog_cover.jpg": "8142a609044c0f5b26df2964fe9304c4",
+"assets/assets/images/projects/movelz/movelz.jpg": "77faa497b2fe6a53d5c2098f94f39614",
+"assets/assets/images/projects/movelz/movelz_cover.jpg": "3c3a2b10b1a2cec85608853b55351460",
 "assets/assets/images/projects/otp_package/otp_cover.png": "6fc7ff3a9d1b6d8cbb81348c8f2df184",
 "assets/assets/images/projects/outfitr/outfitr_1.jpeg": "5a72c14039670e01bcbfaccbff889551",
 "assets/assets/images/projects/outfitr/outfitr_2.jpeg": "b5c6638904552202a14d3d65f6d69116",
@@ -132,7 +134,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "a8af46e55d7709666445eb9267fe1222
 "canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "f31737fb005cd3a3c6bd9355efd33061",
-"flutter_bootstrap.js": "35b84ee2a100a84421ede0ef6d142b5f",
+"flutter_bootstrap.js": "bf076c6cd8564ad9a9822c94ea12f0f8",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -141,7 +143,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "a8af46e55d7709666445eb9267fe1222
 "icons/logo-aerium-2.png": "58b131c1e81194452cb702693c040a92",
 "index.html": "1922792ec8d7761d48707afcb2e9848f",
 "/": "1922792ec8d7761d48707afcb2e9848f",
-"main.dart.js": "32f5e1c4bb32ff2fbf1dcc6333ea8653",
+"main.dart.js": "aa63c0ac773652d0afc456ca0fc6bd7f",
 "manifest.json": "15cd496b85406fb7d94b5991768c744c",
 "version.json": "43efd48f697adad195c70e3f80887b5b"};
 // The application shell files that are downloaded before a service worker can
