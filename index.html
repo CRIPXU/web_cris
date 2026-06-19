@@ -1,44 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <base href="/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Portfolio website for Cristofer Zerpa Portfolio.">
 
-
- <!-- 1. PRIMERO: Configuración Canvas para Clarity -->
-  <script>
-    // Habilitar recording de Canvas para Flutter Web
-    window._clarityCanvas = true;
-    
-    // Forzar repaint para mejor captura
-    function forceCanvasRepaint() {
-      const canvas = document.querySelector('canvas');
-      if (canvas) {
-        canvas.style.opacity = '0.999';
-        setTimeout(() => {
-          canvas.style.opacity = '1';
-          // Agregar atributo para tracking
-          canvas.setAttribute('data-clarity-track', 'true');
-        }, 50);
-      }
-    }
-    
-    // Ejecutar periódicamente y al cargar
-    setInterval(forceCanvasRepaint, 2000);
-    window.addEventListener('load', forceCanvasRepaint);
-    document.addEventListener('DOMContentLoaded', forceCanvasRepaint);
-  </script>
-
-<!--Clarity-->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <!-- 1. Microsoft Clarity Configuration -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "sx9ywuo4we");
-</script>
+
+    // Habilitar captura de Canvas (Experimental)
+    window._clarityCanvas = true;
+  </script>
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,22 +26,182 @@
   <link rel="apple-touch-icon" href="icons/logo-aerium-2.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="icons/logo-aerium-2.png"/>
+  <link rel="icon" type="image/png" href="icons/logo-aerium-2.png" />
 
   <title>Cristofer Zerpa Portfolio</title>
   <link rel="manifest" href="manifest.json">
-  <script type="application/javascript">
-      function openLink(url, target, isAsync=false) {
-        var is_safari = /^(?!.*chrome).*safari/i.test(navigator.userAgent.toLowerCase());
-        if (is_safari && isAsync) {
-          window.location.href = url;
-        } else {
-          window.open(url, target);
-        }
+
+  <style>
+    body {
+      background-color: #1c1330;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #splash-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #1c1330;
+      z-index: 9999;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .logo-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 24px;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 2;
+      position: relative;
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    .shimmer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(246, 195, 80, 0.15) 0%, rgba(246, 195, 80, 0) 70%);
+      border-radius: 50%;
+      animation: shimmer-pulse 2.5s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    .progress-bar {
+      width: 180px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      position: absolute;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #F6C350, transparent);
+      animation: loading 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.9;
       }
-    </script>
+
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+    }
+
+    @keyframes shimmer-pulse {
+
+      0%,
+      100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.2;
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes loading {
+      0% {
+        left: -100%;
+      }
+
+      50% {
+        left: 0%;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+    .initial-load-complete {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
+
 <body>
+  <div id="splash-container">
+    <div class="logo-container">
+      <div class="shimmer"></div>
+      <img src="icons/logo-aerium-2.png" alt="Logo" class="logo-img">
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+
+  <script>
+    // 1. Forzar el modo HTML para que Clarity pueda ver los elementos
+    window.flutterWebRenderer = "html";
+
+    // 2. Lógica para remover el Splash
+    function removeSplash() {
+      var splash = document.getElementById('splash-container');
+      if (splash) {
+        splash.classList.add('initial-load-complete');
+        setTimeout(function () {
+          splash.remove();
+        }, 800);
+      }
+    }
+
+    window.addEventListener('load', function () {
+      // Verificación periódica para quitar el splash
+      var checkFlutter = setInterval(function () {
+        // En modo HTML buscamos elementos de Flutter
+        var flutterHost = document.querySelector('flutter-view') || document.querySelector('flt-glass-pane');
+        if (flutterHost) {
+          clearInterval(checkFlutter);
+          setTimeout(removeSplash, 500);
+        }
+      }, 200);
+
+      // Fallback
+      setTimeout(function () {
+        if (document.getElementById('splash-container')) {
+          removeSplash();
+        }
+      }, 10000);
+    });
+  </script>
+
+  <!-- Cargador de Flutter oficial -->
   <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>
