@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <base href="/cristofer_zerpa_web_portfolio/">
+  <base href="/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Portfolio website for Cristofer Zerpa Portfolio.">
@@ -166,24 +166,22 @@
   </div>
 
   <script>
-    // 1. Forzar el modo HTML para que Clarity pueda ver los elementos
-    window.flutterWebRenderer = "html";
-
-    // 2. Lógica para remover el Splash
-    function removeSplash() {
-      var splash = document.getElementById('splash-container');
-      if (splash) {
-        splash.classList.add('initial-load-complete');
-        setTimeout(function () {
-          splash.remove();
-        }, 800);
-      }
-    }
-
     window.addEventListener('load', function () {
+      // 1. Forzar el modo HTML si es necesario
+      window.flutterWebRenderer = "html";
+
+      function removeSplash() {
+        var splash = document.getElementById('splash-container');
+        if (splash) {
+          splash.classList.add('initial-load-complete');
+          setTimeout(function () {
+            splash.remove();
+          }, 800);
+        }
+      }
+
       // Verificación periódica para quitar el splash
       var checkFlutter = setInterval(function () {
-        // En modo HTML buscamos elementos de Flutter
         var flutterHost = document.querySelector('flutter-view') || document.querySelector('flt-glass-pane');
         if (flutterHost) {
           clearInterval(checkFlutter);
@@ -194,13 +192,14 @@
       // Fallback
       setTimeout(function () {
         if (document.getElementById('splash-container')) {
+          console.warn("Flutter load timeout - removing splash manually");
           removeSplash();
         }
       }, 10000);
     });
   </script>
 
-  <!-- Cargador de Flutter oficial -->
+  <!-- Cargador de Flutter -->
   <script src="flutter_bootstrap.js" async></script>
 </body>
 
