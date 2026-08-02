@@ -3,7 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"app-ads.txt": "b2731cf4bb988ea8cec51076e41dd0ae",
+const RESOURCES = {"404.html": "214cf00a6dce481685009399fa52d71e",
+"app-ads.txt": "b2731cf4bb988ea8cec51076e41dd0ae",
 "assets/AssetManifest.bin": "a8af46e55d7709666445eb9267fe1222",
 "assets/AssetManifest.bin.json": "a903f011f97208a688dd42ce0757296b",
 "assets/AssetManifest.json": "bca52ad18e98e5b2a6f380bb684a33b1",
@@ -135,15 +136,15 @@ const RESOURCES = {"app-ads.txt": "b2731cf4bb988ea8cec51076e41dd0ae",
 "canvaskit/skwasm.worker.js": "89990e8c92bcb123999aa81f7e203b1c",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "4b2350e14c6650ba82871f60906437ea",
-"flutter_bootstrap.js": "ee90bbcfba8ebd29a22777bdad4f208b",
+"flutter_bootstrap.js": "7001ffa9a2c074c00f83fab88b7147bb",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/logo-aerium-1.png": "c9c1749b275f61ebc563d6596ccf2569",
 "icons/logo-aerium-2.png": "58b131c1e81194452cb702693c040a92",
-"index.html": "ed1b3e9eca06ff6832c1832827b9441a",
-"/": "ed1b3e9eca06ff6832c1832827b9441a",
+"index.html": "7d5fdd07183895fdbe748ac2009143a6",
+"/": "7d5fdd07183895fdbe748ac2009143a6",
 "main.dart.js": "ee90c83cdc108ad8806eb51cebb65b70",
 "manifest.json": "15cd496b85406fb7d94b5991768c744c",
 "version.json": "43efd48f697adad195c70e3f80887b5b"};

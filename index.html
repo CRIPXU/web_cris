@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <base href="/">
+  <base href="/web_cris/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Portfolio website for Cristofer Zerpa Portfolio.">
@@ -166,7 +166,7 @@
   </div>
 
   <script>
-    // 1. Forzar el modo HTML para que Clarity pueda ver los elementos
+    // 1. Configuración de renderizado para Flutter 3.27
     window.flutterWebRenderer = "html";
 
     // 2. Lógica para remover el Splash
@@ -175,28 +175,36 @@
       if (splash) {
         splash.classList.add('initial-load-complete');
         setTimeout(function () {
-          splash.remove();
+          if (splash.parentNode) splash.remove();
         }, 800);
       }
     }
 
+    // Manejo de la ruta para GitHub Pages (complemento del 404.html)
+    (function(){
+      var redirect = window.location.search;
+      if (redirect.startsWith('?/')) {
+        var url = redirect.slice(2).replace(/~and~/g, '&');
+        window.history.replaceState(null, null,
+          window.location.pathname.slice(0, window.location.pathname.lastIndexOf('/') + 1) + url
+        );
+      }
+    }());
+
     window.addEventListener('load', function () {
-      // Verificación periódica para quitar el splash
+      // En Flutter 3.27, esperamos a que el motor esté listo
       var checkFlutter = setInterval(function () {
-        // En modo HTML buscamos elementos de Flutter
         var flutterHost = document.querySelector('flutter-view') || document.querySelector('flt-glass-pane');
         if (flutterHost) {
           clearInterval(checkFlutter);
-          setTimeout(removeSplash, 500);
-        }
-      }, 200);
-
-      // Fallback
-      setTimeout(function () {
-        if (document.getElementById('splash-container')) {
           removeSplash();
         }
-      }, 10000);
+      }, 100);
+
+      // Fallback de seguridad
+      setTimeout(function () {
+        removeSplash();
+      }, 15000);
     });
   </script>
 
